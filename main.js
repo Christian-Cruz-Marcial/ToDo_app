@@ -14,8 +14,7 @@ overlay.addEventListener('click', closeFloater)
 
 //------------
 function createTask(e){
-    e.preventDefault();
-    if (!todoInput.value){
+    if (!todoInput){
         alert('please enter a task');
         return;
     }
@@ -26,9 +25,9 @@ function createTask(e){
     todoList.appendChild(task);
     todoForm.reset();
 }
-const todoList = document.querySelector('.todoList');
-const todoForm = document.querySelector('.todoForm');
-const todoInput = todoForm.querySelector('.form-control');
+const todoList = document.querySelector('.todo-list');
+const todoForm = document.querySelector('.todo-form');
+const todoInput = document.querySelector('.form-control').innerHTML;
 const task = JSON.parse(localStorage.getItem('task')) || [];
-todoForm.addEventListener('submit', createTask);
+todoForm.addEventListener('submit', createTask());
 
