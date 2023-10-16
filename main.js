@@ -11,6 +11,7 @@ function closeFloater(){
     }
 }
 input.addEventListener('focusin', showFloater)
+overlay.addEventListener('input', closeFloater)
 overlay.addEventListener('click', closeFloater)
 
 //------------
@@ -41,7 +42,9 @@ function fillTodoList(tasks = []){
     const todoHtml = tasks.map((tasks) =>{
         return `<a href='#' class='task'>
         ${tasks.title}
-        </a>`
+        </a>
+        
+        <label for='Done' class='label'><input type='checkbox' name='Done' class='box' value='Done'> Done</label>`
     }).join('');
     todoList.innerHTML = todoHtml;
 }

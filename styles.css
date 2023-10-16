@@ -67,6 +67,27 @@ body.show-floater .overlay {
     border-bottom: 1px solid white;
     font-size: 16px;
 }
+.label{
+    display: block;
+    background: #FFF;
+    color: rgb(57, 200, 38);
+    padding: 0px;
+    transition: 0.3s ease all;
+    border-bottom: 1px solid white;
+    font-size:12px;
+    padding-left: 10px;
+}
+.box{
+    display: block;
+    background: #FFF;
+    color: rgb(57, 200, 38);
+    padding: 0px;
+    transition: 0.3s ease all;
+    border-bottom: 1px solid white;
+    font-size:12px;
+    margin-left: 10px;
+
+}
 .task:hover{
     color: #1CE;
     text-decoration: none;
@@ -75,7 +96,7 @@ body.show-floater .overlay {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.task:last-child{
+.label:last-child{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom: 0px;
