@@ -105,3 +105,6 @@ body.show-floater .overlay {
     z-index: 9;
     position: relative;
 }
+.col-5{
+    margin-left: 425px;
+}

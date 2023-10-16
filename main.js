@@ -40,11 +40,14 @@ function createTask(){
 
 function fillTodoList(tasks = []){
     const todoHtml = tasks.map((tasks) =>{
-        return `<a href='#' class='task'>
+        return `
+        <div class='col-5'>
+        <a href='#' class='task'>
         ${tasks.title}
         </a>
-        
-        <label for='Done' class='label'><input type='checkbox' name='Done' class='box' value='Done'> Done</label>`
+        <label for='Done' class='label'><input type='checkbox' name='Done' class='box' value='Done'> Done</label>
+        </div>
+        `
     }).join('');
     todoList.innerHTML = todoHtml;
 }
